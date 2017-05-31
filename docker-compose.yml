@@ -4,16 +4,16 @@ services:
   backend-one:
     build: ./backend-one
     expose:
-      - "8080"
+      - "80"
   backend-two:
     build: ./backend-two
     expose:
-      - "8080"
+      - "80"
   frontend:
     build: ./frontend
     ports:
       - "8080"
     environment:
-      BACKEND_ONE_HOSTPORT: backend-one:8080
-      BACKEND_TWO_HOSTPORT: backend-two:8080
+      BACKEND_ONE_HOSTPORT: backend-one:80
+      BACKEND_TWO_HOSTPORT: backend-two:80
 
